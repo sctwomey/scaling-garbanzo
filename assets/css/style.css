@@ -1,0 +1,244 @@
+/* Sets the webpage with basic style attributes. */
+* {
+    box-sizing: border-box;
+    background: #ececec;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Setting the base colors as variables. */
+:root {
+    --firstColor: #0a0808c5;
+    --secondColor: darkblue;
+    --thirdColor: rgb(5, 84, 116);
+    --fourthColor: #fff;
+    --fifthColor: rgb(0, 80, 0);
+    --sixthColor: rgb(58, 121, 58);
+}
+
+/* Setting the body styling for the webpage. */
+body {
+    color: var(--secondColor);
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting and styling the Header elements. */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondColor);
+    margin-top: 0px;
+    width: 100%;
+}
+
+#view-high-scores:hover {
+    color: var(--firstColor);
+    cursor: pointer;
+}
+
+header h5 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondColor);
+    width: 100%;
+    padding-left: 20px;
+    font-size: 2.0rem;
+}
+
+.timer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    background-color: var(--secondColor);
+    color: var(--fourthColor);
+    display: inline-block;
+    text-align: right;
+    padding-right: 100px;
+}
+
+#quiz-timer {
+    background-color: var(--secondColor);
+}
+
+/* Setting the firstColor elements on the webpage. */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Black Ops One', cursive;
+    color: var(--secondColor);
+    font-size: 3.0rem;
+    font-weight: bold;
+}
+
+p {
+    color: var(--firstColor);
+    font-size: 1.70rem;
+    text-align: left;
+    margin: 5px;
+}
+
+p #text-bold {
+    font-weight: bold;
+}
+
+.start {
+    align-items: center;
+    text-align: center;
+}
+
+.start h1 {
+    text-align: center;
+}
+
+.questions {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    margin: auto;
+}
+
+.end h1,
+.end p {
+    text-align: left;
+}
+
+.end input {
+    outline: thick;
+    border-width: 1px;
+    padding: 5px;
+    width: 35%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.end input:focus {
+    border: 2px solid var(--secondColor);
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+#questions {
+    color: var(--firstColor);
+    text-align: left;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+#high-score {
+    text-align: left;
+}
+
+/* Setting the button styling for all of the buttons. */
+.btn {
+    background: var(--secondColor);
+    color: var(--fourthColor);
+    font-size: 1.15rem;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: var(--thirdColor);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:active {
+    border: none;
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.btn-start {
+    width: 25%;
+    margin-top: 30px;
+}
+
+.answerbtn {
+    width: 300px;
+    text-align: left;
+}
+
+.btn-high-scores,
+.btn-clear-scores {
+    background-color: var(--fifthColor);
+    width: 20%;
+}
+
+.btn-high-scores:hover,
+.btn-clear-scores:hover {
+    background: var(--sixthColor);
+}
+
+/* Setting the styling for the Correct/Wrong banners when displayed. */
+.banner {
+    font-size: 25px;
+    text-align: center;
+    color: var(--firstColor);
+    font-style: oblique 35deg;
+    margin: 0 100px;
+}
+
+.banner h2 {
+    font-family: 'Tangerine', serif;
+    font-size: 55px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#correct-answers {
+    color: var(--fifthColor);
+    border-top: 2px solid var(--fifthColor);
+}
+
+#wrong-answers {
+    color: red;
+    border-top: 2px solid red;
+}
+
+/* Setting the list for the High Scores. */
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
+li {
+    font-size: 1.75rem;
+}
+
+li:nth-child(odd) {
+    background-color: rgb(211, 211, 211);
+}
+
+/* Setting the responsive design for screens less than 968px */
+@media screen and (max-width: 968px) {
+
+    .btn {
+        width: 100%;
+    }
+
+}
