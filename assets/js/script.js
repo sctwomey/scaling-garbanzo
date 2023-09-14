@@ -366,3 +366,18 @@ let clearUserScores = function () {
 };
 
 sendHighScore();
+
+// When the "Start Quiz" button is clicked, the quiz begins.
+btnStartQuizEl.addEventListener("click", startQuiz);
+
+// When the "Go Back" button is clicked, the user returns to the start page.
+btnGoBackEl.addEventListener("click", showStartPage);
+
+// When the High Scores button is clicked, the user is shown the high scores in list form.
+seeHighScoresEl.addEventListener("click", showHighScores);
+
+// When the "Submit" button is clicked, the user's initials and score are saved in the local storage and displayed on the page in list form.
+userInitials.addEventListener("submit", generateHighScore);
+
+// When the "Clear High Scores" button is clicked, the information in the local storage is deleted.
+btnClearScoresEl.addEventListener("click", clearUserScores);
