@@ -257,9 +257,9 @@ let generateHighScore = function (scoreEvent) {
 
     scoreEvent.preventDefault();
 
-    let initials = document.querySelector("#initials").value;
+    let uInitials = document.querySelector("#initials").value;
 
-    if (!initials) {
+    if (!uInitials) {
         alert("Please enter your intials in the 'Enter Intials' box!");
         return;
     };
@@ -267,13 +267,13 @@ let generateHighScore = function (scoreEvent) {
     userInitials.reset();
 
     let highScore = {
-        initials: initials,
+        uInitials: uInitials,
         userScore: userScore
     };
 
     userHighScores.push(highScore);
     userHighScores.sort(function (a, b) {
-        return b.userScore - a.userScore;
+        return (b.userScore - a.userScore);
     });
 
     while (listHighScoresEl.firstChild) {
@@ -283,7 +283,7 @@ let generateHighScore = function (scoreEvent) {
     for (let i = 0; i < userHighScores.length; i++) {
         let highQuizScores = document.createElement("li");
         highQuizScores.ClassName = "high-score";
-        highQuizScores.innerHTML = userHighScores[i].initials + " - " + userHighScores[i].userScore;
+        highQuizScores.innerHTML = userHighScores[i].uInitials + " - " + userHighScores[i].userScore;
         listHighScoresEl.appendChild(highQuizScores);
     };
 
@@ -300,13 +300,13 @@ let sendHighScore = function () {
     let sentHighScores = localStorage.getItem("HighScores")
 
     if (!sentHighScores) {
-        return false;
+        return;
     };
 
     sentHighScores = JSON.parse(sentHighScores);
 
     sentHighScores.sort(function (a, b) {
-        return b.userScore - a.userScore;
+        return (b.userScore - a.userScore);
     });
 
     for (let i = 0; i < sentHighScores.length; i++) {
