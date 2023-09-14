@@ -304,8 +304,10 @@ let sendHighScore = function () {
     };
 
     sentHighScores = JSON.parse(sentHighScores);
-    sentHighScores.sort((a, b) => { return b.userScore - a.userScore })
 
+    sentHighScores.sort(function (a, b) {
+        return b.userScore - a.userScore;
+    });
 
     for (let i = 0; i < sentHighScores.length; i++) {
         let quizHighScores = document.createElement("li");
