@@ -11,7 +11,7 @@ const wrongAnswersEl = document.getElementById("wrong-answers");
 const userInitials = document.getElementById("initials-input");
 const startQuizButtonEl = document.querySelector("#start-quiz");
 const goBackButtonEl = document.querySelector("#go-back-button");
-const clearScoresButtonEl = document.querySelector("#clear-high-scores");
+const clearScoresButtonEl = document.querySelector("#clear-high-scores-button");
 
 // Setting the questions and answers for the quiz.
 const quizQuestionsEl = document.getElementById("questions");
