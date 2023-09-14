@@ -4,15 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Web API Quiz Challenge</title>
 </head>
 
 <body>
 
+    <header>
+        <h5 class="timer">Time Remaining: <span id="quiz-timer"></span></h5>
+    </header>
 
+    <section id="start-quiz-container" class="show">
+        <div class="container start">
+            <h1>Challenge 4 Quiz</h1>
+            <p>Please answer the following questions within the given time limit. There are 10 questions for this quiz.
+                Each question is worth 10
+                points. So, there are 100 total possible points.</p>
+            <p><span id="text-bold">Note:</span> Any incorrect answers will remove 10 seconds from your time!</span></p>
+            </p>
+            <button class="btn btn-start" id="start-quiz" title="Start the quiz!">Start Quiz</button>
+            <button id="see-high-scores" class="btn btn-high-scores" title="See all available scores!">High
+                Scores</button>
+        </div>
+    </section>
 
+    <section id="questions-container" class="hide">
+        <div class="container questions">
+            <div id="questions"></div>
+            <div id="answer-buttons" class="btn-column"></div>
+        </div>
+    </section>
 
+    <section id="end-quiz-container" class="hide">
+        <div class="container end">
+            <div id=quiz-score-banner>
+                <h1>Quiz Completed!</h1>
+            </div>
+            <form id="initials-input" class="initials">
+                <p> Enter Initials:
+                    <input type="text" name="initials" id="initials" class="text-input" />
+                    <button class="btn start-end" id="sumbit-score" type="submit">Submit</button>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <section id="high-scores-container" class="hide">
+        <div class="high-scores container">
+            <h1 class="high-scores">High Scores</h1>
+            <ol id="list-high-scores"></ol>
+            <div>
+                <button class="btn" id="go-back" title="Go back to the start page!">Go Back</button>
+                <button class="btn btn-clear-scores" id="clear-high-scores"
+                    title="Clear all scores from the list!">Clear High Scores</button>
+            </div>
+        </div>
+    </section>
+
+    <article class="hide" id="correct-answers">
+        <h2>Correct!</h2>
+    </article>
+    <article class="hide" id="wrong-answers">
+        <h2>Wrong!</h2>
+    </article>
 
     <script src="./assets/js/script.js"></script>
 </body>
