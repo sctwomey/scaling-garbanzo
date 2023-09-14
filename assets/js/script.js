@@ -260,7 +260,7 @@ let generateHighScore = function (scoreEvent) {
 
     scoreEvent.preventDefault();
 
-    let uInitials = document.querySelector("#initials").value;
+    let uInitials = document.querySelector("#user-initials").value;
 
     if (!uInitials) {
         alert("Please enter your intials in the 'Enter Intials' box!");
