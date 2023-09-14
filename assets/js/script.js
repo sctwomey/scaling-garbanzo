@@ -9,9 +9,9 @@ const listHighScoresEl = document.getElementById("list-high-scores");
 const correctAnswersEl = document.getElementById("correct-answers");
 const wrongAnswersEl = document.getElementById("wrong-answers");
 const userInitials = document.getElementById("initials-input");
-const btnStartQuizEl = document.querySelector("#start-quiz");
-const btnGoBackEl = document.querySelector("#go-back");
-const btnClearScoresEl = document.querySelector("#clear-high-scores");
+const startQuizButtonEl = document.querySelector("#start-quiz");
+const goBackButtonEl = document.querySelector("#go-back-button");
+const clearScoresButtonEl = document.querySelector("#clear-high-scores");
 
 // Setting the questions and answers for the quiz.
 const quizQuestionsEl = document.getElementById("questions");
@@ -373,10 +373,10 @@ let clearUserScores = function () {
 sendHighScore();
 
 // When the "Start Quiz" button is clicked, the quiz begins.
-btnStartQuizEl.addEventListener("click", startQuiz);
+startQuizButtonEl.addEventListener("click", startQuiz);
 
 // When the "Go Back" button is clicked, the user returns to the start page.
-btnGoBackEl.addEventListener("click", showStartPage);
+goBackButtonEl.addEventListener("click", showStartPage);
 
 // When the High Scores button is clicked, the user is shown the high scores in list form.
 seeHighScoresEl.addEventListener("click", showHighScores);
@@ -385,4 +385,4 @@ seeHighScoresEl.addEventListener("click", showHighScores);
 userInitials.addEventListener("submit", generateHighScore);
 
 // When the "Clear High Scores" button is clicked, the information in the local storage is deleted.
-btnClearScoresEl.addEventListener("click", clearUserScores);
+clearScoresButtonEl.addEventListener("click", clearUserScores);
