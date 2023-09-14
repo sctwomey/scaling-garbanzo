@@ -183,6 +183,10 @@ p #text-bold {
     text-align: left;
 }
 
+.btn-submit:hover {
+    background-color: var(--thirdColor);
+}
+
 .btn-high-scores,
 .btn-clear-scores {
     background-color: var(--fifthColor);
