@@ -1,22 +1,22 @@
 // Setting main elements of the quiz.
-let startQuizContainerEl = document.getElementById("start-quiz-container");
-let questionsContainerEl = document.getElementById("questions-container");
-let endQuizContainerEl = document.getElementById("end-quiz-container");
-let quizScoreContainerEl = document.getElementById("quiz-score-banner");
-let highScoresContainerEl = document.getElementById("high-scores-container");
-let seeHighScoresEl = document.getElementById("see-high-scores");
-let listHighScoresEl = document.getElementById("list-high-scores");
-let correctAnswersEl = document.getElementById("correct-answers");
-let wrongAnswersEl = document.getElementById("wrong-answers");
-let userInitials = document.getElementById("initials-input");
-let btnStartQuizEl = document.querySelector("#start-quiz");
-let btnGoBackEl = document.querySelector("#go-back");
-let btnClearScoresEl = document.querySelector("#clear-high-scores");
+const startQuizContainerEl = document.getElementById("start-quiz-container");
+const questionsContainerEl = document.getElementById("questions-container");
+const endQuizContainerEl = document.getElementById("end-quiz-container");
+const quizScoreContainerEl = document.getElementById("quiz-score-banner");
+const highScoresContainerEl = document.getElementById("high-scores-container");
+const seeHighScoresEl = document.getElementById("see-high-scores");
+const listHighScoresEl = document.getElementById("list-high-scores");
+const correctAnswersEl = document.getElementById("correct-answers");
+const wrongAnswersEl = document.getElementById("wrong-answers");
+const userInitials = document.getElementById("initials-input");
+const btnStartQuizEl = document.querySelector("#start-quiz");
+const btnGoBackEl = document.querySelector("#go-back");
+const btnClearScoresEl = document.querySelector("#clear-high-scores");
 
 // Setting the questions and answers for the quiz.
-let quizQuestionsEl = document.getElementById("questions");
-let answerButtonsEl = document.getElementById("answer-buttons");
-let quizTimerEl = document.querySelector("#quiz-timer");
+const quizQuestionsEl = document.getElementById("questions");
+const answerButtonsEl = document.getElementById("answer-buttons");
+const quizTimerEl = document.querySelector("#quiz-timer");
 
 // Sets the questions for the quiz from the question and answers array.
 let randomQuestionsArray = [];
@@ -202,7 +202,6 @@ let checkUserAnswer = function (answerEvent) {
 
     } else {
         quizCompleted = "true";
-        showScore();
     };
 
 };
