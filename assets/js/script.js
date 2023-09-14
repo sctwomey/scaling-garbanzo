@@ -106,6 +106,7 @@ let timerSetting = function () {
 
 // Sets the "Go Back" button if it is clicked from the "High Scores" page.
 let showStartPage = function () {
+
     highScoresContainerEl.classList.add("hide");
     highScoresContainerEl.classList.remove("show");
     startQuizContainerEl.classList.remove("hide");
