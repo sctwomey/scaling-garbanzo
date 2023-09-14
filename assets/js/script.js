@@ -202,6 +202,7 @@ let checkUserAnswer = function (answerEvent) {
 
     } else {
         quizCompleted = "true";
+        showScore();
     };
 
 };
