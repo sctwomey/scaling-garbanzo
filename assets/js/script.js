@@ -139,8 +139,10 @@ let startQuiz = function () {
 
     // Fisher Yates shuffle for randomizing the questions.
     for (i = randomQuestionsArray.length - 1; i > 0; i--) {
+
         j = Math.floor(Math.random() * i);
         k = randomQuestionsArray[i];
+
         randomQuestionsArray[i] = randomQuestionsArray[j];
         randomQuestionsArray[j] = k;
     };
