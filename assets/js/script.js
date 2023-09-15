@@ -18,7 +18,7 @@ const quizQuestionsEl = document.getElementById("questions");
 const answerButtonsEl = document.getElementById("answer-buttons");
 const quizTimerEl = document.querySelector("#quiz-timer");
 
-// Sets the questions for the quiz from the question and answers array.
+// Sets the questions for the quiz from the question and answers array (questions from w3schools.com online JavaScript Quiz).
 let randomQuestionsArray = [];
 let questionsIndex = 0;
 
